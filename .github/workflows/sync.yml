@@ -32,7 +32,7 @@ jobs:
             ! -name ".github" \
             -exec rm -rf {} +
 
-          # Распаковываем ByLampa поверх репозитория
+          # Копируем содержимое оригинального ByLampa
           git archive upstream/main | tar -x
 
       - name: Rewrite ByLampa URLs
@@ -50,9 +50,150 @@ jobs:
             --exclude-dir=.github \
             "$OLD" . \
             | while read -r file; do
-                echo "Patching: $file"
+                echo "Patching URL: $file"
                 sed -i "s#${OLD}#${NEW}#g" "$file"
               done
+
+      - name: Patch itemON
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path("addon.js")
+
+          if not path.exists():
+              raise SystemExit("ERROR: addon.js not found")
+
+          text = path.read_text(encoding="utf-8")
+
+          start_marker = "function itemON(sourceURL, sourceName, sourceAuthor, itemName) {"
+          end_marker = "function hideInstall() {"
+
+          start = text.find(start_marker)
+          end = text.find(end_marker, start)
+
+          if start == -1:
+              raise SystemExit("ERROR: itemON() start not found")
+
+          if end == -1:
+              raise SystemExit("ERROR: itemON() end not found")
+
+          new_item_on = r'''function itemON(sourceURL, sourceName, sourceAuthor, itemName) {
+              var settingsItem = $('DIV[data-name="' + itemName + '"]');
+              var statusElement = settingsItem.find('.settings-param__status');
+
+              if (statusElement.hasClass('active')) {
+                  Lampa.Noty.show("Плагин уже установлен!");
+                  return;
+              }
+
+              if (statusElement.css('background-color') === 'rgb(255, 165, 0)') {
+                  Lampa.Noty.show("Плагин уже установлен, но отключен в расширениях!");
+                  return;
+              }
+
+              // После удаления некоторых плагинов Lampa требует перезапуск.
+              if (Lampa.Storage.get('needReboot')) {
+                  Lampa.Noty.show("Для установки плагина после удаления перезапустите приложение");
+                  return;
+              }
+
+              var pluginsArray = Lampa.Storage.get('plugins') || [];
+
+              // Не добавляем один и тот же плагин несколько раз.
+              var alreadyExists = false;
+
+              for (var i = 0; i < pluginsArray.length; i++) {
+                  if (pluginsArray[i].url === sourceURL) {
+                      alreadyExists = true;
+                      break;
+                  }
+              }
+
+              if (!alreadyExists) {
+                  pluginsArray.push({
+                      "author": sourceAuthor,
+                      "url": sourceURL,
+                      "name": sourceName,
+                      "status": 1
+                  });
+
+                  Lampa.Storage.set('plugins', pluginsArray);
+              }
+
+              showLoadingBar();
+
+              // Загружаем плагин и реально проверяем результат.
+              var script = document.createElement('script');
+
+              script.src = sourceURL;
+              script.async = true;
+
+              script.onload = function() {
+                  Lampa.Settings.update();
+
+                  Lampa.Noty.show(
+                      "Плагин " + sourceName + " успешно установлен"
+                  );
+
+                  setTimeout(function() {
+                      if (!focusByIndex(nthChildIndex)) {
+                          Lampa.Controller.toggle('settings_component');
+                      }
+                  }, 500);
+              };
+
+              script.onerror = function() {
+                  console.error(
+                      'ByLampa: ошибка загрузки плагина:',
+                      sourceURL
+                  );
+
+                  // Если файл не загрузился — удаляем его из списка Lampa.
+                  var currentPlugins = Lampa.Storage.get('plugins') || [];
+
+                  var filteredPlugins = currentPlugins.filter(function(plugin) {
+                      return plugin.url !== sourceURL;
+                  });
+
+                  Lampa.Storage.set('plugins', filteredPlugins);
+
+                  Lampa.Settings.update();
+
+                  Lampa.Noty.show(
+                      "Ошибка доступа к плагину: " + sourceName
+                  );
+
+                  setTimeout(function() {
+                      if (!focusByIndex(nthChildIndex)) {
+                          Lampa.Controller.toggle('settings_component');
+                      }
+                  }, 500);
+              };
+
+              document.getElementsByTagName('head')[0].appendChild(script);
+          }
+          '''
+
+          text = text[:start] + new_item_on + "\n" + text[end:]
+
+          path.write_text(text, encoding="utf-8")
+
+          print("itemON() successfully patched.")
+
+          # Проверяем, что старый способ установки действительно исчез.
+          if "script.src = sourceURL;" not in text:
+              raise SystemExit("ERROR: expected script loader not found")
+
+          if "script.onload = function()" not in text:
+              raise SystemExit("ERROR: onload handler not found")
+
+          if "script.onerror = function()" not in text:
+              raise SystemExit("ERROR: onerror handler not found")
+
+          print("Patch verification OK.")
+          PY
 
       - name: Check ByLampa references
         run: |
@@ -63,6 +204,18 @@ jobs:
             --exclude-dir=.github \
             "bylampa.github.io" . \
             || echo "None found."
+
+      - name: Check addon.js
+        run: |
+          echo "Checking addon.js..."
+
+          test -f addon.js
+
+          grep -n "function itemON" addon.js
+          grep -n "script.onload" addon.js
+          grep -n "script.onerror" addon.js
+
+          echo "addon.js check OK."
 
       - name: Commit changes
         run: |
@@ -76,5 +229,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Sync ByLampa and rewrite URLs"
+          git commit -m "Sync ByLampa and patch plugin loader"
           git push origin main
