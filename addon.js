@@ -208,60 +208,101 @@ function itemON(sourceURL, sourceName) {
 --> */
 
 function itemON(sourceURL, sourceName, sourceAuthor, itemName) {
-//if ($('DIV[data-name="' + itemName + '"]').find('.settings-param__status').hasClass('active')) {Lampa.Noty.show("Плагин уже установлен!")} else {	
-if ($('DIV[data-name="' + itemName + '"]').find('.settings-param__status').hasClass('active')) {
-  Lampa.Noty.show("Плагин уже установлен!");
-} else if ($('DIV[data-name="' + itemName + '"]').find('.settings-param__status').css('background-color') === 'rgb(255, 165, 0)') {
-  Lampa.Noty.show("Плагин уже установлен, но отключен в расширениях!");
-} else {	
-	// Если перезагрузки не требуется - контроль после удаления плагинов
-   if (!Lampa.Storage.get('needReboot')) {
-	// Получаем список плагинов
-		var pluginsArray = Lampa.Storage.get('plugins');
-	// Добавляем новый элемент к списку
-		pluginsArray.push({
-			"author": sourceAuthor,
-			"url": sourceURL,
-			"name": sourceName,
-			"status": 1
-		});
-	// Внедряем изменённый список в лампу
-		Lampa.Storage.set('plugins', pluginsArray);
-	// Делаем инъекцию скрипта для немедленной работы
-		var script = document.createElement ('script');
-		script.src = sourceURL;
-		document.getElementsByTagName ('head')[0].appendChild (script);
-		/*setTimeout(function() {
-			Lampa.Settings.update();
-			Lampa.Noty.show("Плагин " + sourceName + " успешно установлен")
-		}, 300);*/
-	        showLoadingBar();
-	          setTimeout(function() {
-			Lampa.Settings.update();
-			Lampa.Noty.show("Плагин " + sourceName + " успешно установлен")
-		  }, 1500);
-	          /*setTimeout(function() {
-                    if (nthChildIndex) {
-                        var F = document.querySelector("#app > div.settings.animate > div.settings__content.layer--height > div.settings__body > div > div > div > div > div:nth-child(" + nthChildIndex + ")")
-                        Lampa.Controller.focus(F);
-                        Lampa.Controller.toggle('settings_component');
-                       // console.log("Установлен фокус на элемент:", F.outerHTML);
-                    } else {
-                        console.error("Ошибка: Элемент с индексом nth-child " + nthChildIndex + " не найден.");
-                    }
-                  }, 2000);*/
-	      setTimeout(function() {
+    var settingsItem = $('DIV[data-name="' + itemName + '"]');
+    var statusElement = settingsItem.find('.settings-param__status');
+
+    if (statusElement.hasClass('active')) {
+        Lampa.Noty.show("Плагин уже установлен!");
+        return;
+    }
+
+    if (statusElement.css('background-color') === 'rgb(255, 165, 0)') {
+        Lampa.Noty.show("Плагин уже установлен, но отключен в расширениях!");
+        return;
+    }
+
+    // После удаления некоторых плагинов Lampa требует перезапуск.
+    if (Lampa.Storage.get('needReboot')) {
+        Lampa.Noty.show("Для установки плагина после удаления перезапустите приложение");
+        return;
+    }
+
+    var pluginsArray = Lampa.Storage.get('plugins') || [];
+
+    // Не добавляем один и тот же плагин несколько раз.
+    var alreadyExists = false;
+
+    for (var i = 0; i < pluginsArray.length; i++) {
+        if (pluginsArray[i].url === sourceURL) {
+            alreadyExists = true;
+            break;
+        }
+    }
+
+    if (!alreadyExists) {
+        pluginsArray.push({
+            "author": sourceAuthor,
+            "url": sourceURL,
+            "name": sourceName,
+            "status": 1
+        });
+
+        Lampa.Storage.set('plugins', pluginsArray);
+    }
+
+    showLoadingBar();
+
+    // Загружаем плагин и реально проверяем результат.
+    var script = document.createElement('script');
+
+    script.src = sourceURL;
+    script.async = true;
+
+    script.onload = function() {
+        Lampa.Settings.update();
+
+        Lampa.Noty.show(
+            "Плагин " + sourceName + " успешно установлен"
+        );
+
+        setTimeout(function() {
             if (!focusByIndex(nthChildIndex)) {
-                // Если по индексу не нашли — вернуть фокус на компонент, чтобы не падало
                 Lampa.Controller.toggle('settings_component');
             }
-          }, 2000);
-// Отправляем сигнал ожидания выхода из настроек для появления окна с предложением перезагрузки
-	  // Lampa.Storage.set('needRebootSettingExit', true);
-	  // settingsWatch();
-   } //else {showReload('Для установки плагинов после удаления, нужно перезагрузить приложение');}
+        }, 500);
+    };
+
+    script.onerror = function() {
+        console.error(
+            'ByLampa: ошибка загрузки плагина:',
+            sourceURL
+        );
+
+        // Если файл не загрузился — удаляем его из списка Lampa.
+        var currentPlugins = Lampa.Storage.get('plugins') || [];
+
+        var filteredPlugins = currentPlugins.filter(function(plugin) {
+            return plugin.url !== sourceURL;
+        });
+
+        Lampa.Storage.set('plugins', filteredPlugins);
+
+        Lampa.Settings.update();
+
+        Lampa.Noty.show(
+            "Ошибка доступа к плагину: " + sourceName
+        );
+
+        setTimeout(function() {
+            if (!focusByIndex(nthChildIndex)) {
+                Lampa.Controller.toggle('settings_component');
+            }
+        }, 500);
+    };
+
+    document.getElementsByTagName('head')[0].appendChild(script);
 }
-}	
+
 function hideInstall() {
 	$("#hideInstall").remove();
 	$('body').append('<div id="hideInstall"><style>div.settings-param__value{opacity: 0%!important;display: none;}</style><div>')
