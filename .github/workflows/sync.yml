@@ -1,0 +1,42 @@
+name: Sync ByLampa
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout mirror
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync from ByLampa
+        run: |
+          git remote add upstream https://github.com/bylampa/bylampa.github.io.git
+          git fetch upstream main
+
+          cp .github/workflows/sync.yml /tmp/sync.yml
+
+          git checkout --orphan upstream-main
+          git rm -rf . || true
+
+          git checkout upstream/main -- .
+          mkdir -p .github/workflows
+          cp /tmp/sync.yml .github/workflows/sync.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          git commit -m "Sync ByLampa" || true
+
+          git branch -M main
+          git push --force origin main
