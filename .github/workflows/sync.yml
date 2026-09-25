@@ -18,25 +18,83 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Sync from ByLampa
+      - name: Save our workflows
         run: |
+          mkdir -p /tmp/my-workflows
+
+          if [ -f .github/workflows/sync.yml ]; then
+            cp .github/workflows/sync.yml /tmp/my-workflows/sync.yml
+          fi
+
+          if [ -f .github/workflows/pages.yml ]; then
+            cp .github/workflows/pages.yml /tmp/my-workflows/pages.yml
+          fi
+
+      - name: Add ByLampa upstream
+        run: |
+          git remote remove upstream 2>/dev/null || true
           git remote add upstream https://github.com/bylampa/bylampa.github.io.git
           git fetch upstream main
 
-          cp .github/workflows/sync.yml /tmp/sync.yml
-
-          git checkout --orphan upstream-main
+      - name: Replace repository contents with ByLampa
+        run: |
           git rm -rf . || true
-
           git checkout upstream/main -- .
-          mkdir -p .github/workflows
-          cp /tmp/sync.yml .github/workflows/sync.yml
 
+      - name: Restore our workflows
+        run: |
+          mkdir -p .github/workflows
+
+          if [ -f /tmp/my-workflows/sync.yml ]; then
+            cp /tmp/my-workflows/sync.yml .github/workflows/sync.yml
+          fi
+
+          if [ -f /tmp/my-workflows/pages.yml ]; then
+            cp /tmp/my-workflows/pages.yml .github/workflows/pages.yml
+          fi
+
+      - name: Rewrite ByLampa URLs to our mirror
+        run: |
+          OLD="https://bylampa.github.io"
+          NEW="https://ilya-shambulin.github.io/mylampa.github.io"
+
+          echo "Replacing:"
+          echo "$OLD"
+          echo "→"
+          echo "$NEW"
+
+          grep -IlR \
+            --exclude-dir=.git \
+            "$OLD" . \
+            | while read -r file; do
+                echo "Patching: $file"
+                sed -i "s#${OLD}#${NEW}#g" "$file"
+              done
+
+      - name: Show remaining ByLampa URLs
+        run: |
+          echo "Checking for remaining references..."
+
+          if grep -RIn \
+            --exclude-dir=.git \
+            "bylampa.github.io" .; then
+
+            echo ""
+            echo "WARNING: Some references to bylampa.github.io remain."
+
+          else
+            echo "OK: No references to bylampa.github.io found."
+          fi
+
+      - name: Commit mirror
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add -A
-          git commit -m "Sync ByLampa" || true
 
-          git branch -M main
-          git push --force origin main
+          git commit \
+            -m "Sync ByLampa and rewrite plugin URLs" \
+            || echo "Nothing to commit"
+
+          git push origin HEAD:main --force
