@@ -18,42 +18,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Save our workflows
-        run: |
-          mkdir -p /tmp/my-workflows
-
-          if [ -f .github/workflows/sync.yml ]; then
-            cp .github/workflows/sync.yml /tmp/my-workflows/sync.yml
-          fi
-
-          if [ -f .github/workflows/pages.yml ]; then
-            cp .github/workflows/pages.yml /tmp/my-workflows/pages.yml
-          fi
-
       - name: Add ByLampa upstream
         run: |
           git remote remove upstream 2>/dev/null || true
           git remote add upstream https://github.com/bylampa/bylampa.github.io.git
           git fetch upstream main
 
-      - name: Replace repository contents with ByLampa
+      - name: Sync ByLampa files
         run: |
-          git rm -rf . || true
+          # Удаляем старое содержимое, но сохраняем GitHub Actions
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name ".git" \
+            ! -name ".github" \
+            -exec rm -rf {} +
+
+          # Копируем содержимое ByLampa
           git checkout upstream/main -- .
 
-      - name: Restore our workflows
-        run: |
-          mkdir -p .github/workflows
+          # Удаляем workflow-файлы, которые могли прийти из upstream
+          git restore --staged .github 2>/dev/null || true
+          git checkout -- .github 2>/dev/null || true
 
-          if [ -f /tmp/my-workflows/sync.yml ]; then
-            cp /tmp/my-workflows/sync.yml .github/workflows/sync.yml
-          fi
-
-          if [ -f /tmp/my-workflows/pages.yml ]; then
-            cp /tmp/my-workflows/pages.yml .github/workflows/pages.yml
-          fi
-
-      - name: Rewrite ByLampa URLs to our mirror
+      - name: Rewrite ByLampa URLs
         run: |
           OLD="https://bylampa.github.io"
           NEW="https://ilya-shambulin.github.io/mylampa.github.io"
@@ -65,18 +51,20 @@ jobs:
 
           grep -IlR \
             --exclude-dir=.git \
+            --exclude-dir=.github \
             "$OLD" . \
             | while read -r file; do
                 echo "Patching: $file"
                 sed -i "s#${OLD}#${NEW}#g" "$file"
               done
 
-      - name: Show remaining ByLampa URLs
+      - name: Check remaining ByLampa URLs
         run: |
           echo "Checking for remaining references..."
 
           if grep -RIn \
             --exclude-dir=.git \
+            --exclude-dir=.github \
             "bylampa.github.io" .; then
 
             echo ""
@@ -97,4 +85,4 @@ jobs:
             -m "Sync ByLampa and rewrite plugin URLs" \
             || echo "Nothing to commit"
 
-          git push origin HEAD:main --force
+          git push origin HEAD:main
