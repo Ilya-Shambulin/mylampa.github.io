@@ -430,11 +430,11 @@ Lampa.Settings.listener.follow('open', function (e) {
                             },
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/tmdb-proxy.js', 'ByLAMPA TMDB Proxy', '@bylampa', 'ByLAMPA TMDB', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js', 'ByLAMPA TMDB Proxy', '@bylampa', 'ByLAMPA TMDB', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/tmdb-proxy.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -450,13 +450,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="TMDB"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/tmdb-proxy.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="ByLAMPA TMDB"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/tmdb-proxy.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -664,11 +664,11 @@ Lampa.Settings.listener.follow('open', function (e) {
                             },
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/tmdb-proxy.js', 'TMDB Proxy', '@lampa', 'TMDB', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js', 'TMDB Proxy', '@lampa', 'TMDB', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/tmdb-proxy.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -684,13 +684,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="TMDB"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						/*var myResult = checkPlugin('https://bylampa.github.io/tmdb-proxy.js');
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="TMDB"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/tmdb-proxy.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/tmdb-proxy.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -835,17 +835,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/rating.js', 'Рейтинг КиноПоиск и IMDB', '@t_anton', 'Rating', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/rating.js', 'Рейтинг КиноПоиск и IMDB', '@t_anton', 'Rating', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/rating.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/rating.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/rating.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/rating.js')
 						setTimeout(function() {	
 							$('div[data-name="Rating"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -854,13 +854,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Rating"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/rating.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/rating.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Rating"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/rating.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/rating.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1015,11 +1015,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/mult.js', 'Мультфильмы', '@AndreyURL54', 'Mult', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/mult.js', 'Мультфильмы', '@AndreyURL54', 'Mult', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/mult.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/mult.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -1034,13 +1034,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Mult"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/mult.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/mult.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Mult"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/mult.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/mult.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1135,17 +1135,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/weather.js', 'Погода', '@scabrum', 'Weather', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/weather.js', 'Погода', '@scabrum', 'Weather', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/weather.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/weather.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1154,13 +1154,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/weather.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/weather.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/weather.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1195,17 +1195,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/cub_off.js', 'Cub Off', '@scabrum', 'Cub_off', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/cub_off.js', 'Cub Off', '@scabrum', 'Cub_off', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/cub_off.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/cub_off.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/cub_off.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/cub_off.js')
 						setTimeout(function() {	
 							$('div[data-name="Cub_off"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1214,13 +1214,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Cub_off"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/cub_off.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/cub_off.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Cub_off"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/cub_off.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/cub_off.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1255,17 +1255,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/interface.js', 'Стильный Интерфейс', '@lampa', 'Style_interface_fix', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/interface.js', 'Стильный Интерфейс', '@lampa', 'Style_interface_fix', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/interface.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/interface.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/interface.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/interface.js')
 						setTimeout(function() {	
 							$('div[data-name="Style_interface_fix"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1274,13 +1274,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Style_interface_fix"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/interface.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/interface.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Style_interface_fix"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/interface.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/interface.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1375,17 +1375,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/source.js', 'Дополнительные Источники', '@scabrum', 'New_source', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/source.js', 'Дополнительные Источники', '@scabrum', 'New_source', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/source.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/source.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/source.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/source.js')
 						setTimeout(function() {	
 							$('div[data-name="New_source"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1394,13 +1394,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="New_source"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/source.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/source.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="New_source"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/source.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/source.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1436,17 +1436,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/kp_source.js', 'Источник КП', '@bylampa', 'kp_source', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/kp_source.js', 'Источник КП', '@bylampa', 'kp_source', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/kp_source.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/kp_source.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/kp_source.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/kp_source.js')
 						setTimeout(function() {	
 							$('div[data-name="New_source"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1455,13 +1455,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="New_source"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/kp_source.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/kp_source.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="kp_source"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/kp_source.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/kp_source.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1497,17 +1497,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/start.js', 'Start', '@scabrum', 'Start', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/start.js', 'Start', '@scabrum', 'Start', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/start.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/start.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/start.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/start.js')
 						setTimeout(function() {	
 							$('div[data-name="Start"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1516,13 +1516,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Start"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/start.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/start.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Start"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/start.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/start.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1670,11 +1670,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 						},
 						onChange: function(value) {
 							if (value == '1') {
-								itemON('https://bylampa.github.io/rezka_comments.js', 'Комментарии Rezka', '@BDV_Burik', 'Rezka_comments', nthChildIndex);
+								itemON('https://ilya-shambulin.github.io/mylampa.github.io/rezka_comments.js', 'Комментарии Rezka', '@BDV_Burik', 'Rezka_comments', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 							}
 							if (value == '2') {
-								var pluginToRemoveUrl = "https://bylampa.github.io/rezka_comments.js";
+								var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/rezka_comments.js";
 								deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 							}
@@ -1689,13 +1689,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 									$('div[data-name="Rezka_comments"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 								}
 							}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/rezka_comments.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/rezka_comments.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Rezka_comments"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/rezka_comments.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/rezka_comments.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1792,11 +1792,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 						},
 						onChange: function(value) {
 							if (value == '1') {
-								itemON('https://bylampa.github.io/remove_ts.js', 'Remove TS', '@oniontorproject', 'ts_del', nthChildIndex);
+								itemON('https://ilya-shambulin.github.io/mylampa.github.io/remove_ts.js', 'Remove TS', '@oniontorproject', 'ts_del', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 							}
 							if (value == '2') {
-								var pluginToRemoveUrl = "https://bylampa.github.io/remove_ts.js";
+								var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/remove_ts.js";
 								deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 							}
@@ -1811,13 +1811,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 									$('div[data-name="ts_del"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 								}
 							}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/remove_ts.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/remove_ts.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="ts_del"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/remove_ts.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/remove_ts.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1853,17 +1853,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/rus_movie.js', 'Русские Новинки', '@bylampa', 'rus_movie', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/rus_movie.js', 'Русские Новинки', '@bylampa', 'rus_movie', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/rus_movie.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/rus_movie.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1872,13 +1872,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/rus_movie.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/rus_movie.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="rus_movie"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/rus_movie.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/rus_movie.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1914,17 +1914,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/in_quality.js', 'В Качестве', '@bylampa', 'in_qual', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/in_quality.js', 'В Качестве', '@bylampa', 'in_qual', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/in_quality.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/in_quality.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1933,13 +1933,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/in_quality.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/in_quality.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="in_qual"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/in_quality.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/in_quality.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -1975,17 +1975,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/snow.js', 'Снег', '@bylampa', 'snow', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/snow.js', 'Снег', '@bylampa', 'snow', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/snow.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/snow.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1994,13 +1994,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/snow.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/snow.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="snow"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/snow.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/snow.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2036,17 +2036,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/logo_title.js', 'Лого Вместо Названия', '@bylampa', 'logo_title', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js', 'Лого Вместо Названия', '@bylampa', 'logo_title', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/logo_title.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/logo_title.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2055,13 +2055,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/logo_title.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="logo_title"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/logo_title.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2107,7 +2107,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/logo_title.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2168,7 +2168,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/logo_title.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2219,17 +2219,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/cardify.js', 'Cardify', '@lampa', 'cardify', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/cardify.js', 'Cardify', '@lampa', 'cardify', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/cardify.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/cardify.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/logo_title.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2238,13 +2238,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/cardify.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/cardify.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="cardify"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/cardify.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/cardify.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2280,17 +2280,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/backmenu.js', 'Меню Выход', '@bylampa', 'back_menu', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/backmenu.js', 'Меню Выход', '@bylampa', 'back_menu', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/backmenu.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/backmenu.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/logo_title.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2299,13 +2299,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/backmenu.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/backmenu.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="back_menu"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/backmenu.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/backmenu.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2341,17 +2341,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/themes.js', 'Мои Темы', '@bylampa', 'my_themes', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/themes.js', 'Мои Темы', '@bylampa', 'my_themes', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/themes.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/themes.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/logo_title.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/logo_title.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2360,13 +2360,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/themes.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/themes.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="my_themes"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/themes.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/themes.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2402,17 +2402,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/inter_movie.js', 'Зарубежные Подборки', '@bylampa', 'inter_movie', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/inter_movie.js', 'Зарубежные Подборки', '@bylampa', 'inter_movie', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/inter_movie.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/inter_movie.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2421,13 +2421,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/inter_movie.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/inter_movie.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="inter_movie"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/inter_movie.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/inter_movie.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2463,17 +2463,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/rate_lampa.js', 'Рейтинг Lampa', '@AndreyURL54', 'rate_lampa', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/rate_lampa.js', 'Рейтинг Lampa', '@AndreyURL54', 'rate_lampa', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/rate_lampa.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/rate_lampa.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2482,13 +2482,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/rate_lampa.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/rate_lampa.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="rate_lampa"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/rate_lampa.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/rate_lampa.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2524,17 +2524,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/old_card_status.js', 'Статус На Старой Карточке', '@bylampa', 'old_cards_status', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/old_card_status.js', 'Статус На Старой Карточке', '@bylampa', 'old_cards_status', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/old_card_status.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/old_card_status.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2543,13 +2543,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/old_card_status.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/old_card_status.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="old_cards_status"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/old_card_status.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/old_card_status.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2585,17 +2585,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/seas_and_eps.js', 'Состояние Сериала', '@bylampa', 'eps_and_seas', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/seas_and_eps.js', 'Состояние Сериала', '@bylampa', 'eps_and_seas', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/seas_and_eps.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/seas_and_eps.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2604,13 +2604,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/seas_and_eps.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/seas_and_eps.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="eps_and_seas"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/seas_and_eps.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/seas_and_eps.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2646,17 +2646,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/anime.js', 'Аниме', '@bylampa', 'anime_tmdb', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/anime.js', 'Аниме', '@bylampa', 'anime_tmdb', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/anime.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/anime.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2665,13 +2665,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/anime.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/anime.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="anime_tmdb"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/anime.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/anime.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2707,17 +2707,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/my_bookmarks.js', 'Мои Закладки', '@bylampa', 'my_bookmarks', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/my_bookmarks.js', 'Мои Закладки', '@bylampa', 'my_bookmarks', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/my_bookmarks.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/my_bookmarks.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2726,13 +2726,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/my_bookmarks.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/my_bookmarks.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="my_bookmarks"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/my_bookmarks.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/my_bookmarks.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2768,17 +2768,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/color_vote.js', 'Цветные Оценки', '@fovway', 'color_vote', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/color_vote.js', 'Цветные Оценки', '@fovway', 'color_vote', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/color_vote.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/color_vote.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2787,13 +2787,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/color_vote.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/color_vote.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="color_vote"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/color_vote.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/color_vote.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -2839,7 +2839,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2900,7 +2900,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -2961,7 +2961,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3022,7 +3022,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3083,7 +3083,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3134,17 +3134,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/lable_serial.js', 'Лейбл Сериала', '@bylampa', 'lable_tv', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/lable_serial.js', 'Лейбл Сериала', '@bylampa', 'lable_tv', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/lable_serial.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/lable_serial.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3153,13 +3153,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/lable_serial.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/lable_serial.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="lable_tv"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/lable_serial.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/lable_serial.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3195,17 +3195,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/full_center.js', 'Card Elems Center', '@bylampa', 'full_center', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/full_center.js', 'Card Elems Center', '@bylampa', 'full_center', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/full_center.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/full_center.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3214,13 +3214,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/full_center.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/full_center.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="full_center"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/full_center.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/full_center.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3256,17 +3256,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/bylampa_source.js', 'Источник ByLAMPA', '@bylampa', 'bylampa_source', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/bylampa_source.js', 'Источник ByLAMPA', '@bylampa', 'bylampa_source', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/bylampa_source.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/bylampa_source.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3275,13 +3275,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/bylampa_source.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/bylampa_source.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="bylampa_source"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/bylampa_source.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/bylampa_source.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3327,7 +3327,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3378,17 +3378,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/trailer_off.js', 'Trailer Off', '@bylampa', 'tr_off', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/trailer_off.js', 'Trailer Off', '@bylampa', 'tr_off', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/trailer_off.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/trailer_off.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3397,13 +3397,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/trailer_off.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/trailer_off.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="tr_off"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/trailer_off.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/trailer_off.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3439,17 +3439,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/quality.js', 'Quality', '@bylampa', 'quality', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/quality.js', 'Quality', '@bylampa', 'quality', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/quality.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/quality.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3458,13 +3458,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/quality.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/quality.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="quality"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/quality.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/quality.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3500,17 +3500,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/filter_content.js', 'Фильтр Контента', '@bylampa', 'filter_content', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/filter_content.js', 'Фильтр Контента', '@bylampa', 'filter_content', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/filter_content.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/filter_content.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3519,13 +3519,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/filter_content.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/filter_content.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="filter_content"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/filter_content.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/filter_content.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3561,17 +3561,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/rate_on_main.js', 'Источник Рейтинга', '@bylampa', 'rate_on_main', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/rate_on_main.js', 'Источник Рейтинга', '@bylampa', 'rate_on_main', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/rate_on_main.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/rate_on_main.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3580,13 +3580,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/rate_on_main.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/rate_on_main.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="rate_on_main"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/rate_on_main.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/rate_on_main.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3622,17 +3622,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/orig_title.js', 'Источник Рейтинга', '@bylampa', 'orig_title', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/orig_title.js', 'Источник Рейтинга', '@bylampa', 'orig_title', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/orig_title.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/orig_title.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3641,13 +3641,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/orig_title.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/orig_title.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="orig_title"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/orig_title.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/orig_title.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3683,17 +3683,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/animated_reaction.js', 'Анимированные Реакции', '@AndreyURL54', 'animated_reaction', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/animated_reaction.js', 'Анимированные Реакции', '@AndreyURL54', 'animated_reaction', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/animated_reaction.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/animated_reaction.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3702,13 +3702,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/animated_reaction.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/animated_reaction.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="animated_reaction"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/animated_reaction.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/animated_reaction.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3744,17 +3744,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/time2end.js', 'Time2End', '@AndreyURL54', 'time2end', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/time2end.js', 'Time2End', '@AndreyURL54', 'time2end', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/time2end.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/time2end.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3763,13 +3763,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/time2end.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/time2end.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="time2end"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/time2end.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/time2end.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3805,17 +3805,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/top.js', 'Top ByLAMPA', '@bylampa', 'top', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/top.js', 'Top ByLAMPA', '@bylampa', 'top', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/top.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/top.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3824,13 +3824,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/top.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/top.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="top"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/top.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/top.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3866,17 +3866,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/card_buttons_editor.js', 'Редактор кнопок в карточке', '@bylampa', 'card_buttons_editor', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/card_buttons_editor.js', 'Редактор кнопок в карточке', '@bylampa', 'card_buttons_editor', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/card_buttons_editor.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/card_buttons_editor.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3885,13 +3885,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/card_buttons_editor.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/card_buttons_editor.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="card_buttons_editor"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/card_buttons_editor.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/card_buttons_editor.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3927,17 +3927,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/continue_all.js', 'Продолжить просмотр', '@bylampa', 'continue_all', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/continue_all.js', 'Продолжить просмотр', '@bylampa', 'continue_all', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/continue_all.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/continue_all.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -3946,13 +3946,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/continue_all.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/continue_all.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="continue_all"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/continue_all.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/continue_all.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -3988,17 +3988,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/nova_plus.js', 'Nova Plus', '@bylampa', 'nova_plus', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/nova_plus.js', 'Nova Plus', '@bylampa', 'nova_plus', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/nova_plus.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/nova_plus.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 			                onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall()
-						/*var myResult = checkPlugin('https://bylampa.github.io/weather.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js')
 						setTimeout(function() {	
 							$('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -4007,13 +4007,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/nova_plus.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/nova_plus.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="nova_plus"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/nova_plus.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/nova_plus.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -4274,11 +4274,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/dlna.js', 'DLNA', '@lampa', 'DLNA', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/dlna.js', 'DLNA', '@lampa', 'DLNA', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/dlna.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/dlna.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -4293,13 +4293,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="DLNA"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/dlna.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/dlna.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="DLNA"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/dlna.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/dlna.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -4514,17 +4514,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/redirect.js', 'Смена Сервера', '@scabrum', 'Redirect', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js', 'Смена Сервера', '@scabrum', 'Redirect', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/redirect.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/redirect.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/redirect.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js')
 						setTimeout(function() {	
 							$('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -4533,13 +4533,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Redirect"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/redirect.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/redirect.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/redirect.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -4574,15 +4574,15 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/timecode.js', 'Синхронизация Таймкодов', '@scabrum', 'Timecode');
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/timecode.js', 'Синхронизация Таймкодов', '@scabrum', 'Timecode');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/timecode.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/timecode.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/timecode.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/timecode.js')
 						setTimeout(function() {	
 							$('div[data-name="Timecode"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -4591,13 +4591,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Timecode"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						/*var myResult = checkPlugin('https://bylampa.github.io/timecode.js');
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/timecode.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Timecode"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/timecode.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/timecode.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -4813,17 +4813,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/account.js', 'Аккаунт', '@bylampa', 'acc_bylampa', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/account.js', 'Аккаунт', '@bylampa', 'acc_bylampa', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/account.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/account.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/redirect.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js')
 						setTimeout(function() {	
 							$('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -4832,13 +4832,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Redirect"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						/*var myResult = checkPlugin('https://bylampa.github.io/account.js');
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/account.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="acc_bylampa"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/account.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/account.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -4884,7 +4884,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/redirect.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js')
 						setTimeout(function() {	
 							$('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -4935,17 +4935,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/cub_sync.js', 'CUB Sync', '@levende', 'cub_sync', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/cub_sync.js', 'CUB Sync', '@levende', 'cub_sync', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/cub_sync.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/cub_sync.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/redirect.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js')
 						setTimeout(function() {	
 							$('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -4954,13 +4954,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Redirect"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/cub_sync.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/cub_sync.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="cub_sync"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/cub_sync.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/cub_sync.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -4996,17 +4996,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/reload.js', 'Перезагрузка Приложения', '@bylampa', 'Reload', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/reload.js', 'Перезагрузка Приложения', '@bylampa', 'Reload', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/reload.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/reload.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/redirect.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js')
 						setTimeout(function() {	
 							$('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -5015,13 +5015,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Redirect"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/reload.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/reload.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Reload"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/reload.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/reload.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5057,17 +5057,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://bylampa.github.io/sort_main_menu.js', 'Sort Main Menu', '@bylampa', 'sort_main_menu', nthChildIndex);
+						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/sort_main_menu.js', 'Sort Main Menu', '@bylampa', 'sort_main_menu', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/sort_main_menu.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/sort_main_menu.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/redirect.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/redirect.js')
 						setTimeout(function() {	
 							$('div[data-name="Redirect"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -5076,13 +5076,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Redirect"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/sort_main_menu.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/sort_main_menu.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="sort_main_menu"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/sort_main_menu.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/sort_main_menu.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5118,11 +5118,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/speedtest.js', 'Speedtest', '@AndreyURL54', 'speedtest', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/speedtest.js', 'Speedtest', '@AndreyURL54', 'speedtest', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/speedtest.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/speedtest.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}	
@@ -5137,13 +5137,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="setprotect"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/speedtest.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/speedtest.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="speedtest"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/speedtest.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/speedtest.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5281,11 +5281,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/online_mod.js', 'Online Mod', '@t_anton', 'Online_Mod', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/online_mod.js', 'Online Mod', '@t_anton', 'Online_Mod', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/online_mod.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/online_mod.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -5300,13 +5300,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Online_Mod"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/online_mod.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/online_mod.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Online_Mod"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/online_mod.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/online_mod.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5342,11 +5342,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/fx.js', 'Онлайн Filmix', '@rik', 'Онлайн_Prestige', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/fx.js', 'Онлайн Filmix', '@rik', 'Онлайн_Prestige', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/fx.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/fx.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -5361,13 +5361,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Онлайн_Prestige"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/fx.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/fx.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Онлайн_Prestige"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/fx.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/fx.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5403,11 +5403,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
                            		onChange: function(value) {
 					if (value == '1') {
-						itemON('https://bylampa.github.io/cinema.js', 'Онлайн Cinema', '@cinema', 'online_cinema', nthChildIndex);
+						itemON('https://ilya-shambulin.github.io/mylampa.github.io/cinema.js', 'Онлайн Cinema', '@cinema', 'online_cinema', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 					}
 					if (value == '2') {
-						var pluginToRemoveUrl = "https://bylampa.github.io/cinema.js";
+						var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/cinema.js";
 						deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 					}
@@ -5422,13 +5422,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Онлайн_BWA"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/cinema.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/cinema.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="online_cinema"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/cinema.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/cinema.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5763,11 +5763,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/free_onl.js', 'Free Online', '@bylampa', 'free_onl', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/free_onl.js', 'Free Online', '@bylampa', 'free_onl', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/free_onl.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/free_onl.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -5782,13 +5782,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Online_Mod"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						/*var myResult = checkPlugin('https://bylampa.github.io/free_onl.js');
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/free_onl.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="free_onl"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/free_onl.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/free_onl.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5870,17 +5870,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/jackett.js', 'Переключение Парсеров', '@AndreyURL54', 'Switch_Parser', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/jackett.js', 'Переключение Парсеров', '@AndreyURL54', 'Switch_Parser', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/jackett.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/jackett.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/jackett.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/jackett.js')
 						setTimeout(function() {	
 							$('div[data-name="Switch_Parser"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -5889,13 +5889,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Switch_Parser"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/jackett.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/jackett.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Switch_Parser"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/jackett.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/jackett.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5931,11 +5931,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/tracks.js', 'Tracks', '@lampa', 'Tracks', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/tracks.js', 'Tracks', '@lampa', 'Tracks', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/tracks.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/tracks.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -5950,13 +5950,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Tracks"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/tracks.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/tracks.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Tracks"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/tracks.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/tracks.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -5992,11 +5992,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/etor.js', 'Настройка Торрентов', '@lampa', 'Setting_torrents', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/etor.js', 'Настройка Торрентов', '@lampa', 'Setting_torrents', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/etor.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/etor.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
                                                 }
@@ -6011,13 +6011,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Setting_torrents"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/etor.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/etor.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Setting_torrents"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/etor.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/etor.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -6232,17 +6232,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/freetorr.js', 'Free Torrserver', '@scabrum', 'free_torr', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/freetorr.js', 'Free Torrserver', '@scabrum', 'free_torr', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/freetorr.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/freetorr.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
                                                 }
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/freetorr.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/freetorr.js')
 						setTimeout(function() {	
 							$('div[data-name="free_torr"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -6251,13 +6251,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="free_torr"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/freetorr.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/freetorr.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="free_torr"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/freetorr.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/freetorr.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -6303,7 +6303,7 @@ Lampa.Settings.listener.follow('open', function (e) {
                                                 }
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/freetorr.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/freetorr.js')
 						setTimeout(function() {	
 							$('div[data-name="free_torr"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -6582,17 +6582,17 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/tv.js', 'Hack TV', '@scabrum', 'Hack_TV', nthChildIndex);
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/tv.js', 'Hack TV', '@scabrum', 'Hack_TV', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/tv.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/tv.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						/*var myResult = checkPlugin('https://bylampa.github.io/tv.js')
+						/*var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/tv.js')
 						setTimeout(function() {	
 							$('div[data-name="Hack_TV"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -6601,13 +6601,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Hack_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/tv.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/tv.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Hack_TV"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/tv.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/tv.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
@@ -7139,10 +7139,10 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('https://bylampa.github.io/sisi.js', 'Клубничка', '@rik', 'sisi_durex');
+							itemON('https://ilya-shambulin.github.io/mylampa.github.io/sisi.js', 'Клубничка', '@rik', 'sisi_durex');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://bylampa.github.io/sisi.js";
+							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/sisi.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
@@ -7156,13 +7156,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Nyam"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://bylampa.github.io/sisi.js');
+						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/sisi.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="sisi_durex"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://bylampa.github.io/sisi.js') {
+                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/sisi.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
