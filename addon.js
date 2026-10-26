@@ -2,6 +2,17 @@
     'use strict';
 	
 function addonStart() {
+
+var pluginsWeather = Lampa.Storage.get('plugins', []);
+
+pluginsWeather.forEach(function (plug) {
+    plug.url = (plug.url + '').replace(
+        'https://ilya-shambulin.github.io/mylampa.github.io/weather.js',
+        'http://pl.bylampa.online/weather.js'
+    );
+});
+
+Lampa.Storage.set('plugins', pluginsWeather);
 	    
 /*
  * * * Иконки разделов плагина
@@ -1172,15 +1183,15 @@ Lampa.Settings.listener.follow('open', function (e) {
 						},
 					field: {
 						name: 'Погода',
-						description: 'Плагин будет поочередно показывать время и погоду, чередуя их показания'
+						description: 'Плагин отображает погоду в верхней части экрана, так же можно посмотреть дополнительную информацию,а в настройках настроить автообновление, режим выбора города, кнопку дополнительной информации и использование прокси для загрузки информации'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/weather.js', 'Погода', '@scabrum', 'Weather', nthChildIndex);
+						       itemON('http://pl.bylampa.online/weather.js', 'Погода', '@bylampa', 'Weather', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/weather.js";
+							var pluginToRemoveUrl = "http://pl.bylampa.online/weather.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -1195,13 +1206,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/weather.js');
+						var myResult = checkPlugin('http://pl.bylampa.online/weather.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Weather"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/weather.js') {
+                                                          if (pluginsArray[i].url === 'http://pl.bylampa.online/weather.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
