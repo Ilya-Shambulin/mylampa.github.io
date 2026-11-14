@@ -6148,7 +6148,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 						    });
 					}
 		});
-	        Lampa.SettingsApi.addParam({
+	        /*Lampa.SettingsApi.addParam({
 					component: 'add_torrent_plugin',
 					param: {
 						name: 'Check_server',
@@ -6184,7 +6184,7 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Check_server"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('http://193.233.134.21/plugins/checker.js');
+						/*var myResult = checkPlugin('http://193.233.134.21/plugins/checker.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="Check_server"]').append('<div class="settings-param__status one"></div>');
@@ -6207,7 +6207,7 @@ Lampa.Settings.listener.follow('open', function (e) {
                                                         nthChildIndex = focus_back(event); // Сохраняем элемент в переменной
 						    });
 					}
-		});
+		});*/
 	         Lampa.SettingsApi.addParam({
 					component: 'add_torrent_plugin',
 					param: {
