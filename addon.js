@@ -3,16 +3,17 @@
 	
 function addonStart() {
 
-var pluginsWeather = Lampa.Storage.get('plugins', []);
+var plugins = Lampa.Storage.get('plugins', []);
 
-pluginsWeather.forEach(function (plug) {
-    plug.url = (plug.url + '').replace(
-        'https://ilya-shambulin.github.io/mylampa.github.io/weather.js',
-        'http://pl.bylampa.online/weather.js'
-    );
+plugins.forEach(function (plug) {
+    if (plug.url) {
+        plug.url = (plug.url + '')
+            .replace('https://ilya-shambulin.github.io/mylampa.github.io/weather.js', 'http://pl.bylampa.online/weather.js')
+            .replace('https://ilya-shambulin.github.io/mylampa.github.io/cardify.js', 'http://pl.bylampa.online/cardify.js');
+    }
 });
 
-Lampa.Storage.set('plugins', pluginsWeather);
+Lampa.Storage.set('plugins', plugins);
 	    
 /*
  * * * Иконки разделов плагина
@@ -2271,11 +2272,11 @@ Lampa.Settings.listener.follow('open', function (e) {
 					},
 					onChange: function(value) {
 						if (value == '1') {
-						       itemON('https://ilya-shambulin.github.io/mylampa.github.io/cardify.js', 'Cardify', '@lampa', 'cardify', nthChildIndex);
+						       itemON('http://pl.bylampa.online/cardify.js', 'Cardify', '@lampa', 'cardify', nthChildIndex);
 							// console.log("nthChildIndex, переданный в itemON:", nthChildIndex);
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "https://ilya-shambulin.github.io/mylampa.github.io/cardify.js";
+							var pluginToRemoveUrl = "http://pl.bylampa.online/cardify.js";
 							deletePlugin(pluginToRemoveUrl, nthChildIndex);
 							// console.log("nthChildIndex, переданный в deletePlugin:", nthChildIndex);
 						}
@@ -2290,13 +2291,13 @@ Lampa.Settings.listener.follow('open', function (e) {
 								$('div[data-name="Weather"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);*/
-						var myResult = checkPlugin('https://ilya-shambulin.github.io/mylampa.github.io/cardify.js');
+						var myResult = checkPlugin('http://pl.bylampa.online/cardify.js');
                                                 var pluginsArray = Lampa.Storage.get('plugins');
                                                     setTimeout(function() {
                                                        $('div[data-name="cardify"]').append('<div class="settings-param__status one"></div>');
                                                        var pluginStatus = null;
                                                        for (var i = 0; i < pluginsArray.length; i++) {
-                                                          if (pluginsArray[i].url === 'https://ilya-shambulin.github.io/mylampa.github.io/cardify.js') {
+                                                          if (pluginsArray[i].url === 'http://pl.bylampa.online/cardify.js') {
                                                              pluginStatus = pluginsArray[i].status;
                                                              break;
                                                           }
